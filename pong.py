@@ -1,5 +1,5 @@
 import turtle
-import time  # Added time module to control frame rate
+import time  
 
 # Setup the screen
 wn = turtle.Screen()
@@ -37,7 +37,6 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-# Adjusted speed values for 60 FPS gameplay
 ball.dx = 2.5
 ball.dy = -2.5
 
@@ -53,25 +52,25 @@ pen.write("Player A: 0  Player B: 0", align="center", font=("Courier", 24, "norm
 # Functions to move paddles (with screen boundary checks)
 def paddle_a_up():
     y = paddle_a.ycor()
-    if y < 250:  # Keeps paddle on screen
+    if y < 250: 
         y += 20
         paddle_a.sety(y)
 
 def paddle_a_down():
     y = paddle_a.ycor()
-    if y > -240:  # Keeps paddle on screen
+    if y > -240:  
         y -= 20
         paddle_a.sety(y)
 
 def paddle_b_up():
     y = paddle_b.ycor()
-    if y < 250:  # Keeps paddle on screen
+    if y < 250: 
         y += 20
         paddle_b.sety(y)
 
 def paddle_b_down():
     y = paddle_b.ycor()
-    if y > -240:  # Keeps paddle on screen
+    if y > -240:  
         y -= 20
         paddle_b.sety(y)
 
@@ -84,7 +83,7 @@ wn.onkeypress(paddle_b_down, "Down")
 
 # Main game loop
 while True:
-    time.sleep(1 / 60)  # Caps the loop to roughly 60 FPS
+    time.sleep(1 / 60)  
     wn.update()
 
     # Move the ball
