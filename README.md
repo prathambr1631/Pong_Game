@@ -62,5 +62,5 @@ Pong_Game/
 
 ## 👨‍💻 Author
 
-**Pratham BR**
+**Pratham BR** |
 **BTech CSE(AIML)**
